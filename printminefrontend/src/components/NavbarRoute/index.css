@@ -1,0 +1,71 @@
+.navbar-main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  background-color: white;
+}
+
+.navbar-logo-heading {
+  font-family: "Roboto";
+  font-size: 25px;
+  color: #000000;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.navbar-ul-list-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0px;
+  gap: 20px;
+}
+
+.navbar-buttons {
+  font-family: "Roboto";
+  font-size: 17px;
+  color: #808080;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.navbar-icons-container {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-icons {
+  color: #000;
+  font-weight: bold;
+  font-size: 33px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.navbar-logout-button {
+  background-color: blue;
+  color: white;
+  border-width: 0px;
+  cursor: pointer;
+  font-family: "Roboto";
+  border-radius: 5px;
+  padding: 0.6vw;
+}
+
+.link-tag {
+  text-decoration: none;
+}
+
+.cart-items-length {
+  color: #000000;
+  background-color: lightblue;
+  padding: 0.5vw;
+  border-radius: 50%;
+}

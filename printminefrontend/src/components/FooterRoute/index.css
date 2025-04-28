@@ -1,0 +1,14 @@
+.footer-container {
+  background-color: navy;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-heading {
+  font-family: "Roboto";
+  font-size: 27px;
+  color: white;
+  font-weight: bold;
+}

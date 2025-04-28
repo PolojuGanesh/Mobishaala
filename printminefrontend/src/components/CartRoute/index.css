@@ -1,0 +1,39 @@
+.cart-container {
+  background-size: cover;
+  min-height: 50vh;
+}
+
+.empty-cart-para {
+  min-height: 50vh;
+}
+
+.cart-list-ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.cart-item {
+  margin: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid gainsboro;
+  margin: 1vw;
+  border-radius: 0.7vw;
+  padding-right: 2vw;
+}
+
+.cart-item-image {
+  height: 200px;
+}
+
+.cart-item-details {
+}
+
+.cart-product-title {
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
