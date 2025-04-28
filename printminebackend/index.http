@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 ###
 
-GET http://localhost:3000/keychains/?rating=3
+GET http://localhost:3000/keychains/?rating=2
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwiaWF0IjoxNzQzNDM3OTg1fQ.__NRsYw6pLa4H5DMHk6I8zw3RYcqseiG1Lqu5kZK5nQ
 ###
 
