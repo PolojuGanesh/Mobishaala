@@ -3,18 +3,18 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import "./index.css";
 
 const FooterRoute = () => (
-  <footer id="footer" class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3 class="footer-title">Primtmine</h3>
-        <p class="footer-description">
+  <footer id="footer" className="footer">
+    <div className="footer-container">
+      <div className="footer-section">
+        <h3 className="footer-title">Primtmine</h3>
+        <p className="footer-description">
           Building modern web apps with PrimeNG, PrimeFlex, and Angular.
         </p>
       </div>
 
-      <div class="footer-section">
-        <h4 class="footer-subtitle">Quick Links</h4>
-        <ul class="footer-links">
+      <div className="footer-section">
+        <h4 className="footer-subtitle">Quick Links</h4>
+        <ul className="footer-links">
           <li>
             <a href="/">Home</a>
           </li>
@@ -30,9 +30,9 @@ const FooterRoute = () => (
         </ul>
       </div>
 
-      <div class="footer-section">
-        <h4 class="footer-subtitle">Follow Us</h4>
-        <div class="footer-icons">
+      <div className="footer-section">
+        <h4 className="footer-subtitle">Follow Us</h4>
+        <div className="footer-icons">
           <a href="#footer">
             <FaFacebookF className="social-icons" />
           </a>
@@ -46,7 +46,7 @@ const FooterRoute = () => (
       </div>
     </div>
 
-    <div class="footer-bottom">
+    <div className="footer-bottom">
       <p>© 2025 Primtmine. All rights reserved.</p>
     </div>
   </footer>

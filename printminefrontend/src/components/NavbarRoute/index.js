@@ -17,7 +17,6 @@ const NavbarRoute = () => {
     <CartContext.Consumer>
       {(value) => {
         const { cartItems } = value;
-        console.log(cartItems.length)
         return (
           <nav className="navbar-main-container">
             <Link className="link-tag" to="/">

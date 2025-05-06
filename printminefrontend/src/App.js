@@ -16,6 +16,10 @@ import "./App.css";
 class App extends Component {
   state = { cartItems: [] };
 
+  removeAllCartItems = () => {
+    this.setState({ cartItems: [] });
+  };
+
   addToCart = (product) => {
     this.setState((prevState) => {
       const existingProductIndex = prevState.cartItems.find(
@@ -35,12 +39,43 @@ class App extends Component {
     });
   };
 
+  removeCartItem = (id) => {
+    const { cartItems } = this.state;
+
+    this.setState({ cartItems: cartItems.filter((each) => each.id !== id) });
+  };
+
+  incrementCartItemQuantity = (id) => {
+    this.setState((prev) => ({
+      cartItems: prev.cartItems.map((each) =>
+        each.id === id ? { ...each, quantity: each.quantity + 1 } : each
+      ),
+    }));
+  };
+
+  decrementCartItemQuantity = (id) => {
+    this.setState((prevState) => ({
+      cartItems: prevState.cartItems.map((eachItem) =>
+        eachItem.id === id
+          ? {
+              ...eachItem,
+              quantity: eachItem.quantity > 1 ? eachItem.quantity - 1 : 1,
+            }
+          : eachItem
+      ),
+    }));
+  };
+
   render() {
     return (
       <CartContext.Provider
         value={{
           cartItems: this.state.cartItems,
           addToCart: this.addToCart,
+          removeAllCartItems: this.removeAllCartItems,
+          removeCartItem: this.removeCartItem,
+          incrementCartItemQuantity: this.incrementCartItemQuantity,
+          decrementCartItemQuantity: this.decrementCartItemQuantity,
         }}
       >
         <div className="App">
