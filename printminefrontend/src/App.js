@@ -18,24 +18,20 @@ class App extends Component {
 
   addToCart = (product) => {
     this.setState((prevState) => {
-      const existingProductIndex = prevState.cartItems.findIndex(
+      const existingProductIndex = prevState.cartItems.find(
         (item) => item.id === product.id
       );
 
-      let updatedCart;
-      if (existingProductIndex !== -1) {
-        updatedCart = [...prevState.cartItems];
-        updatedCart[existingProductIndex].quantity += product.quantity;
-      } else {
-        updatedCart = [
-          ...prevState.cartItems,
-          {
-            ...product,
-            quantity: product.quantity || 1,
-          },
-        ];
+      if (existingProductIndex) {
+        return {
+          cartItems: prevState.cartItems.map((eachItem) =>
+            eachItem.id === product.id
+              ? { ...eachItem, quantity: eachItem.quantity + product.quantity }
+              : eachItem
+          ),
+        };
       }
-      return { cartItems: updatedCart };
+      return { cartItems: [...prevState.cartItems, product] };
     });
   };
 
