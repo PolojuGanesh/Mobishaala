@@ -41,7 +41,7 @@ class KeyChainRoute extends Component {
     this.setState((prevState) => ({
       cartCounts: {
         ...prevState.cartCounts,
-        [id]: (prevState.cartCounts[id] || 0) + 1,
+        [id]: (prevState.cartCounts[id] || 1) + 1,
       },
     }));
   };
@@ -50,7 +50,7 @@ class KeyChainRoute extends Component {
     this.setState((prevState) => ({
       cartCounts: {
         ...prevState.cartCounts,
-        [id]: Math.max((prevState.cartCounts[id] || 0) - 1, 0),
+        [id]: Math.max((prevState.cartCounts[id] || 1) - 1, 1),
       },
     }));
   };

@@ -21,12 +21,19 @@ class App extends Component {
       const existingProductIndex = prevState.cartItems.findIndex(
         (item) => item.id === product.id
       );
+
       let updatedCart;
       if (existingProductIndex !== -1) {
         updatedCart = [...prevState.cartItems];
-        updatedCart[existingProductIndex].quantity = product.quantity;
+        updatedCart[existingProductIndex].quantity += product.quantity;
       } else {
-        updatedCart = [...prevState.cartItems, { ...product }];
+        updatedCart = [
+          ...prevState.cartItems,
+          {
+            ...product,
+            quantity: product.quantity || 1,
+          },
+        ];
       }
       return { cartItems: updatedCart };
     });
